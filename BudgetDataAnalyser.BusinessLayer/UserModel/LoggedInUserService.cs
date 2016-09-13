@@ -8,6 +8,6 @@ namespace BudgetDataAnalyser.BusinessLayer.UserModel
 {
     public class LoggedInUserService : ILoggedInUserService
     {
-        public UserModel LoggedInEmployee { get; set; }
+        public UserModel LoggedInUser { get; set; }
     }
 }

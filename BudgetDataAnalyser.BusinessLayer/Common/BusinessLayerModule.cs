@@ -1,4 +1,5 @@
 ﻿using Autofac;
+using BudgetDataAnalyser.BusinessLayer.UserModel;
 using BudgetDataAnalyser.DataLayer;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,10 @@ namespace BudgetDataAnalyser.BusinessLayer.Common
         {
            /* builder.RegisterType<ProductService>()
                 .As<IProductService>()
-                .InstancePerLifetimeScope();
-            builder.RegisterType<OrderService>()
-                .As<IOrderService>()
                 .InstancePerLifetimeScope();*/
+            builder.RegisterType<UserService>()
+                .As<IUserService>()
+                .InstancePerLifetimeScope();
             builder.RegisterAssemblyModules(
                 typeof(ISampleContext).Assembly);
         }

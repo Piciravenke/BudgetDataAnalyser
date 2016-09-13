@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Autofac;
+using BudgetDataAnalyser.LoginView;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,22 @@ namespace BudgetDataAnalyser
         public Form1()
         {
             InitializeComponent();
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            using (var lifetimeScope = Program.Container.BeginLifetimeScope())
+            {
+                var form = lifetimeScope.Resolve<LoginForm>();
+                if (form.ShowDialog() == DialogResult.OK)
+                {
+
+                }
+                else
+                {
+                    Close();
+                }
+            }
         }
     }
 }
