@@ -57,15 +57,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\BaseModel.cs" />
     <Compile Include="Common\BaseService.cs" />
+    <Compile Include="Common\BusinessLayerModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserModel\ILoggedInUserService.cs" />
+    <Compile Include="UserModel\IUserService.cs" />
+    <Compile Include="UserModel\LoggedInUserService.cs" />
+    <Compile Include="UserModel\UserModel.cs" />
+    <Compile Include="UserModel\UserService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="UserModel\" />
+    <ProjectReference Include="..\BudgetDataAnalyser.DataLayer\BudgetDataAnalyser.DataLayer.csproj">
+      <Project>{E78552C5-0C57-4283-9C3F-44AD07979B2E}</Project>
+      <Name>BudgetDataAnalyser.DataLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

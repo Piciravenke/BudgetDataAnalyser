@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BudgetDataAnalyser.DataLayer;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,5 +9,10 @@ namespace BudgetDataAnalyser.BusinessLayer
 {
     public class BaseService
     {
+        protected readonly ISampleContext Context;
+        public BaseService(ISampleContext context)
+        {
+            Context = context;
+        }
     }
 }
